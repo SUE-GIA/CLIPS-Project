@@ -1,0 +1,279 @@
+; Sun Dec 10 23:44:50 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([ChemicalFacilityProject2023_Class46] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class77]
+		[ChemicalFacilityProject2023_Class85])
+	(TankName "Tank 1"))
+
+([ChemicalFacilityProject2023_Class47] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class78]
+		[ChemicalFacilityProject2023_Class79])
+	(TankName "Tank 2"))
+
+([ChemicalFacilityProject2023_Class48] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class84]
+		[ChemicalFacilityProject2023_Class86])
+	(TankName "Tank 3"))
+
+([ChemicalFacilityProject2023_Class49] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class80]
+		[ChemicalFacilityProject2023_Class79]
+		[ChemicalFacilityProject2023_Class85])
+	(TankName "Tank 4"))
+
+([ChemicalFacilityProject2023_Class50] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class82]
+		[ChemicalFacilityProject2023_Class77]
+		[ChemicalFacilityProject2023_Class85])
+	(TankName "Tank 5"))
+
+([ChemicalFacilityProject2023_Class51] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class83]
+		[ChemicalFacilityProject2023_Class86]
+		[ChemicalFacilityProject2023_Class80])
+	(TankName "Tank 6"))
+
+([ChemicalFacilityProject2023_Class52] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class78]
+		[ChemicalFacilityProject2023_Class77])
+	(TankName "Tank 7"))
+
+([ChemicalFacilityProject2023_Class53] of  Tank
+
+	(Contains
+		[ChemicalFacilityProject2023_Class81]
+		[ChemicalFacilityProject2023_Class80]
+		[ChemicalFacilityProject2023_Class79])
+	(TankName "Tank 8"))
+
+([ChemicalFacilityProject2023_Class54] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class46])
+	(DrainName "Drain 1"))
+
+([ChemicalFacilityProject2023_Class55] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class47])
+	(DrainName "Drain 2"))
+
+([ChemicalFacilityProject2023_Class56] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class48])
+	(DrainName "Drain 3"))
+
+([ChemicalFacilityProject2023_Class57] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class49])
+	(DrainName "Drain 4"))
+
+([ChemicalFacilityProject2023_Class58] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class50])
+	(DrainName "Drain 5"))
+
+([ChemicalFacilityProject2023_Class59] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class51])
+	(DrainName "Drain 6"))
+
+([ChemicalFacilityProject2023_Class60] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class52])
+	(DrainName "Drain 7"))
+
+([ChemicalFacilityProject2023_Class61] of  Drain
+
+	(Connects [ChemicalFacilityProject2023_Class53])
+	(DrainName "Drain 8"))
+
+([ChemicalFacilityProject2023_Class62] of  Drain
+
+	(Connects
+		[ChemicalFacilityProject2023_Class54]
+		[ChemicalFacilityProject2023_Class55]
+		[ChemicalFacilityProject2023_Class56])
+	(DrainName "Drain 9"))
+
+([ChemicalFacilityProject2023_Class63] of  Drain
+
+	(Connects
+		[ChemicalFacilityProject2023_Class57]
+		[ChemicalFacilityProject2023_Class58])
+	(DrainName "Drain 10"))
+
+([ChemicalFacilityProject2023_Class64] of  Drain
+
+	(Connects
+		[ChemicalFacilityProject2023_Class59]
+		[ChemicalFacilityProject2023_Class60])
+	(DrainName "Drain 11"))
+
+([ChemicalFacilityProject2023_Class65] of  Drain
+
+	(Connects
+		[ChemicalFacilityProject2023_Class63]
+		[ChemicalFacilityProject2023_Class62])
+	(DrainName "Drain 12"))
+
+([ChemicalFacilityProject2023_Class66] of  Drain
+
+	(Connects
+		[ChemicalFacilityProject2023_Class64]
+		[ChemicalFacilityProject2023_Class61])
+	(DrainName "Drain 13"))
+
+([ChemicalFacilityProject2023_Class77] of  Strong+Acid
+
+	(%28corrosive%29 TRUE)
+	(Chemical+Symbol "H2SO4")
+	(colour none)
+	(English+Name "Sulphuric acid")
+	(Greek+Name "Θειικό οξύ")
+	(ph 2)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.0)
+	(spectroscopy sulphur)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class78] of  Strong+Acid
+
+	(%28corrosive%29 TRUE)
+	(Chemical+Symbol "HCl")
+	(colour none)
+	(English+Name "Hydrocloric Acid")
+	(Greek+Name "Θειικό οξύ")
+	(ph 2)
+	(radioactivity FALSE)
+	(smell choking)
+	(Specific+gravity 1.0)
+	(spectroscopy none)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class79] of  Weak+Acid
+
+	(Chemical+Symbol "CH3COOH")
+	(colour none)
+	(English+Name "Acetic acid")
+	(Greek+Name "Οξικό οξύ")
+	(ph 3)
+	(radioactivity FALSE)
+	(smell vinegar)
+	(Specific+gravity 1.0)
+	(spectroscopy none)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class80] of  Weak+Acid
+
+	(%28corrosive%29 TRUE)
+	(Chemical+Symbol "H2CO3")
+	(colour none)
+	(English+Name "Carbonic acid")
+	(Greek+Name "Ανθρακικό οξύ")
+	(ph 5)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.0)
+	(spectroscopy carbon)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class81] of  Strong+Base
+
+	(%28corrosive%29 TRUE)
+	(Chemical+Symbol "NaOH")
+	(colour none)
+	(English+Name "Sodium hydroxide")
+	(Greek+Name "Υδροξείδιο του Νατρίου")
+	(ph 14)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.0)
+	(spectroscopy sodium)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class82] of  Weak+Base
+
+	(Chemical+Symbol "none")
+	(colour red)
+	(English+Name "Chromogen 23")
+	(Greek+Name "Χρωμογόνο 23")
+	(ph 14)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 0.9)
+	(spectroscopy none)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class83] of  Weak+Base
+
+	(%28corrosive%29 FALSE)
+	(Chemical+Symbol "Al(OH)3")
+	(colour none)
+	(English+Name "Aluminium hydroxide")
+	(Greek+Name "Υδροξείδιο του Αργιλίου")
+	(ph 13)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.1)
+	(spectroscopy none)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class84] of  Weak+Base
+
+	(Chemical+Symbol "RbOH")
+	(colour none)
+	(English+Name "Rubidium hydroxide")
+	(Greek+Name "Υδροξείδιο του Ρουβιδίου")
+	(ph 12)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.1)
+	(spectroscopy metal)
+	(WaterSoluble TRUE))
+
+([ChemicalFacilityProject2023_Class85] of  Oil
+
+	(Chemical+Symbol "none")
+	(colour none)
+	(English+Name "Petrol")
+	(explosive TRUE)
+	(Greek+Name "Βενζίνη")
+	(PCBs FALSE)
+	(ph 0)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.0)
+	(spectroscopy carbon)
+	(WaterSoluble FALSE))
+
+([ChemicalFacilityProject2023_Class86] of  Oil
+
+	(Chemical+Symbol "none")
+	(colour none)
+	(English+Name "Transformer oil")
+	(explosive FALSE)
+	(Greek+Name "Πετρέλαιο")
+	(PCBs TRUE)
+	(ph 0)
+	(radioactivity FALSE)
+	(smell none)
+	(Specific+gravity 1.0)
+	(spectroscopy carbon)
+	(WaterSoluble FALSE))

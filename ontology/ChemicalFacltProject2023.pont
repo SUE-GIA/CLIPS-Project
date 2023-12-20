@@ -1,0 +1,269 @@
+; Sun Dec 10 23:44:50 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot spectroscopy
+		(type SYMBOL)
+		(allowed-values carbon sulphur metal sodium none)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Contains
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(cardinality 0 4)
+		(create-accessor read-write))
+	(single-slot %28corrosive%29
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Connects
+		(type INSTANCE)
+;+		(allowed-classes PollutionStation)
+		(cardinality 0 4)
+		(create-accessor read-write))
+	(multislot ChemicalFacilityProject2023_Class75
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(create-accessor read-write))
+	(single-slot colour
+		(type SYMBOL)
+		(allowed-values white red none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot radioactivity
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot WaterSoluble
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Chemical+Symbol
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot pH+Base
+		(type INTEGER)
+		(range 11 14)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot explosive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot corrosive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot English+Name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DrainName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Specific+gravity
+		(type FLOAT)
+		(range 0.9 1.1)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Greek+Name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ph
+		(type INTEGER)
+		(range 0 14)
+		(cardinality 0 2)
+		(create-accessor read-write))
+	(single-slot PCBs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot KB_824569_Class1
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot TankName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type SYMBOL)
+		(allowed-values choking vinegar none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type INTEGER)
+		(range 0 14)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pH+Acid
+		(type INTEGER)
+		(range 0 5)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Chemical
+	(is-a USER)
+	(role concrete)
+	(single-slot spectroscopy
+		(type SYMBOL)
+		(allowed-values carbon sulphur metal sodium none)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Chemical+Symbol
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot English+Name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot colour
+		(type SYMBOL)
+		(allowed-values white red none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Specific+gravity
+		(type FLOAT)
+		(range 0.9 1.1)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot radioactivity
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Greek+Name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ph
+		(type INTEGER)
+		(range 0 14)
+		(cardinality 0 2)
+		(create-accessor read-write))
+	(single-slot smell
+		(type SYMBOL)
+		(allowed-values choking vinegar none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %28corrosive%29
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot WaterSoluble
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Acid
+	(is-a Chemical)
+	(role concrete)
+	(multislot ph
+		(type INTEGER)
+		(range 0 5)
+		(cardinality 0 2)
+		(create-accessor read-write)))
+
+(defclass Strong+Acid
+	(is-a Acid)
+	(role concrete)
+	(multislot ph
+		(type INTEGER)
+		(range 0 2)
+		(cardinality 0 2)
+		(create-accessor read-write)))
+
+(defclass Weak+Acid
+	(is-a Acid)
+	(role concrete)
+	(multislot ph
+		(type INTEGER)
+		(range 3 5)
+		(cardinality 0 2)
+		(create-accessor read-write)))
+
+(defclass Base
+	(is-a Chemical)
+	(role concrete)
+	(multislot ph
+		(type INTEGER)
+		(range 11 14)
+		(cardinality 0 2)
+		(create-accessor read-write)))
+
+(defclass Strong+Base
+	(is-a Base)
+	(role concrete))
+
+(defclass Weak+Base
+	(is-a Base)
+	(role concrete))
+
+(defclass Oil
+	(is-a Chemical)
+	(role concrete)
+	(single-slot explosive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PCBs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass PollutionStation
+	(is-a USER)
+	(role concrete))
+
+(defclass Storage
+	(is-a PollutionStation)
+	(role concrete))
+
+(defclass Tank
+	(is-a Storage)
+	(role concrete)
+	(single-slot TankName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Contains
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(cardinality 0 4)
+		(create-accessor read-write)))
+
+(defclass DrainageSystem
+	(is-a PollutionStation)
+	(role concrete))
+
+(defclass Drain
+	(is-a DrainageSystem)
+	(role concrete)
+	(multislot Connects
+		(type INSTANCE)
+;+		(allowed-classes PollutionStation)
+		(cardinality 0 4)
+		(create-accessor read-write))
+	(single-slot DrainName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
